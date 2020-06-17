@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "https://github.com/rurumimic/creating-node-package",
   "author": "rurumimic",
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": { 
+    "registry": "https://npm.pkg.github.com/" 
+  }
 }

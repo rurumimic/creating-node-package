@@ -32,6 +32,12 @@ Wrote to /path/to/package/package.json:
 }
 ```
 
+Add `publishConfig`:
+
+```json
+"publishConfig": { "registry": "https://npm.pkg.github.com/<username>" }
+```
+
 ### Fields
 
 A `package.json` file must contain **"name"** and **"version"** fields.
@@ -56,13 +62,25 @@ exports.printMsg = function() {
 
 ### Login
 
+Generate new token: [Personal access tokens](https://github.com/settings/tokens). Add the `repo` and `read:packages` scopes.
+
+Add `GITHUB_TOKEN`:
+
 ```bash
-npm login
+vi ~/.npmrc
+
+//npm.pkg.github.com/:_authToken=TOKEN
+```
+
+Login:
+
+```bash
+npm login --registry=https://npm.pkg.github.com/
 
 Username: <your-npm-username>
-Password: <password>
+Password: <TOKEN>
 Email: (this IS public) <your-public-email>
-Enter one-time password from your authenticator app: <OTP>
+
 Logged in as <your-npm-username> on https://registry.npmjs.org/.
 ```
 
@@ -101,3 +119,20 @@ node test.js
 
 Hello World
 ```
+
+---
+
+## In GitHub
+
+Go to `https://github.com/<username>/<repository>/packages`.
+
+Step 1: Use `publishConfig` option in your package.json
+`"publishConfig": { "registry": "https://npm.pkg.github.com/<username>" }`
+
+Step 2: Authenticate
+
+`$ npm login --registry=https://npm.pkg.github.com/`
+
+Step 3: Publish
+
+`$ npm publish`
