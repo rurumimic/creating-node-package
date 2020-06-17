@@ -131,8 +131,13 @@ Logged in as <your-npm-username> on https://registry.npmjs.org/.
 ```
 
 5. Use `publishConfig` option in your package.json:
-`"publishConfig": { "registry": "https://npm.pkg.github.com" }`
+
+```json
+"publishConfig": { "registry": "https://npm.pkg.github.com" }
+```
 
 6. Publish:
 
-`npm publish`
+```json
+npm publish
+```
