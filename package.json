@@ -1,0 +1,9 @@
+{
+  "name": "creating-node-package",
+  "version": "1.0.0",
+  "description": "My private Node package",
+  "main": "index.js",
+  "repository": "https://github.com/rurumimic/creating-node-package",
+  "author": "rurumimic",
+  "license": "MIT"
+}
