@@ -1,5 +1,5 @@
 {
-  "name": "creating-node-package",
+  "name": "@rurumimic/creating-node-package",
   "version": "1.0.0",
   "description": "My private Node package",
   "main": "index.js",
@@ -7,6 +7,6 @@
   "author": "rurumimic",
   "license": "MIT",
   "publishConfig": { 
-    "registry": "https://npm.pkg.github.com/" 
+    "registry": "https://npm.pkg.github.com" 
   }
 }
